@@ -1,0 +1,152 @@
+{
+  "full_name": "Anya Sharma",
+  "email": "anya.sharma@example.com",
+  "phone": "+1 (555) 123-4567",
+  "location": "San Francisco, CA",
+  "title": "Senior Data Engineer",
+  "summary": "Highly experienced Senior Data Engineer with 8+ years of expertise in designing, building, and optimizing scalable data pipelines and data warehousing solutions. Proficient in Python, Apache Spark, AWS, and various big data technologies. Proven ability to lead complex data projects, improve data quality, and drive data-driven decision-making.",
+  "skills": {
+    "programming_languages": [
+      "Python",
+      "Scala",
+      "SQL",
+      "Java"
+    ],
+    "frameworks": [
+      "Apache Spark",
+      "Apache Flink",
+      "Airflow",
+      "Kafka",
+      "Databricks"
+    ],
+    "databases": [
+      "PostgreSQL",
+      "Snowflake",
+      "Amazon Redshift",
+      "MongoDB",
+      "Elasticsearch"
+    ],
+    "cloud": [
+      "AWS (S3, EC2, Lambda, Glue, Redshift, Kinesis, EMR, Athena)",
+      "Azure (Data Lake, Data Factory)"
+    ],
+    "other": [
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "ETL/ELT",
+      "Data Warehousing",
+      "Big Data",
+      "Data Modeling",
+      "Git"
+    ]
+  },
+  "work_experience": [
+    {
+      "company": "DataWave Analytics",
+      "role": "Senior Data Engineer",
+      "location": "San Francisco, CA",
+      "start_date": "2021-03",
+      "end_date": "Present",
+      "description": [
+        "Led the design and implementation of a new scalable data lake architecture on AWS using S3, Glue, and EMR, reducing data processing time by 30%.",
+        "Developed and maintained robust ETL pipelines using Python, Spark, and Airflow for various business domains, processing petabytes of data daily.",
+        "Optimized existing data warehouse queries and data models in Snowflake, resulting in a 25% improvement in query performance and cost efficiency.",
+        "Mentored junior data engineers and established best practices for data quality, testing, and deployment using CI/CD pipelines."
+      ],
+      "technologies": [
+        "Python",
+        "Apache Spark",
+        "AWS S3",
+        "AWS Glue",
+        "AWS EMR",
+        "Snowflake",
+        "Airflow",
+        "Kafka",
+        "Docker",
+        "Git"
+      ]
+    },
+    {
+      "company": "InfoStream Solutions",
+      "role": "Data Engineer",
+      "location": "Seattle, WA",
+      "start_date": "2018-06",
+      "end_date": "2021-02",
+      "description": [
+        "Built and maintained data ingestion pipelines from various sources into a centralized data platform using Python, Kafka, and PostgreSQL.",
+        "Developed Spark jobs for data transformation and aggregation, supporting analytical reporting and machine learning initiatives.",
+        "Collaborated with data scientists and analysts to understand data requirements and deliver reliable data sets.",
+        "Implemented monitoring and alerting for data pipelines to ensure data integrity and availability."
+      ],
+      "technologies": [
+        "Python",
+        "Apache Spark",
+        "Kafka",
+        "PostgreSQL",
+        "AWS EC2",
+        "Redshift",
+        "Jupyter",
+        "SQL"
+      ]
+    },
+    {
+      "company": "Tech Innovations Inc.",
+      "role": "Junior Data Engineer",
+      "location": "Portland, OR",
+      "start_date": "2016-09",
+      "end_date": "2018-05",
+      "description": [
+        "Assisted in the development and maintenance of ETL scripts for data extraction and loading into data warehouses.",
+        "Performed data quality checks and resolved data discrepancies.",
+        "Wrote SQL queries for data analysis and reporting."
+      ],
+      "technologies": [
+        "Python",
+        "SQL",
+        "MySQL",
+        "Pandas",
+        "Bash"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of California, Berkeley",
+      "degree": "M.S. in Data Science",
+      "location": "Berkeley, CA",
+      "start_date": "2015",
+      "end_date": "2016"
+    },
+    {
+      "institution": "University of Washington",
+      "degree": "B.S. in Computer Science",
+      "location": "Seattle, WA",
+      "start_date": "2011",
+      "end_date": "2015"
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "level": "Native"
+    },
+    {
+      "name": "Hindi",
+      "level": "Professional Working"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Data Analytics \u2013 Specialty",
+      "issuer": "Amazon Web Services",
+      "year": 2022
+    },
+    {
+      "name": "Databricks Certified Associate Data Engineer",
+      "issuer": "Databricks",
+      "year": 2021
+    }
+  ],
+  "avatar_seed": "anya.sharma@example.com"
+}

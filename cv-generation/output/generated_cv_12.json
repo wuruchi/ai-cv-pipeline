@@ -1,0 +1,143 @@
+{
+  "full_name": "Eleanor Vance",
+  "email": "eleanor.vance@example.com",
+  "phone": "+1-555-0123",
+  "location": "Austin, TX",
+  "title": "Senior MLOps Engineer",
+  "summary": "Highly motivated and results-oriented Senior MLOps Engineer with 6+ years of experience in designing, implementing, and optimizing machine learning pipelines and infrastructure. Proficient in cloud platforms (AWS, Azure, GCP), containerization (Docker, Kubernetes), and MLOps tools (Kubeflow, MLflow). Proven ability to bridge the gap between data science and engineering teams to deliver robust, scalable, and production-ready AI solutions. Seeking to leverage expertise in a challenging environment to drive innovation and operational excellence.",
+  "skills": {
+    "programming_languages": [
+      "Python",
+      "Go",
+      "Bash",
+      "SQL"
+    ],
+    "frameworks": [
+      "TensorFlow",
+      "PyTorch",
+      "Scikit-learn",
+      "Kubeflow",
+      "MLflow",
+      "Airflow",
+      "Ray"
+    ],
+    "databases": [
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "Cassandra"
+    ],
+    "cloud": [
+      "AWS (EC2, S3, SageMaker, Lambda, EKS)",
+      "Azure (Azure ML, AKS, Data Factory)",
+      "GCP (Vertex AI, GKE, Cloud Functions)"
+    ],
+    "other": [
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "Ansible",
+      "Git",
+      "CI/CD (GitLab CI, Jenkins, Azure DevOps)",
+      "Prometheus",
+      "Grafana",
+      "Agile/Scrum"
+    ]
+  },
+  "work_experience": [
+    {
+      "company": "Innovate AI Solutions",
+      "role": "Senior MLOps Engineer",
+      "location": "Austin, TX",
+      "start_date": "2021-03",
+      "end_date": "Present",
+      "description": [
+        "Led the design and implementation of MLOps pipelines using Kubeflow and MLflow for various ML models, reducing model deployment time by 40%.",
+        "Developed and maintained containerized (Docker) microservices for model serving and inference using Kubernetes (EKS/AKS) on AWS and Azure.",
+        "Implemented CI/CD workflows for machine learning models and infrastructure using GitLab CI, ensuring automated testing, build, and deployment.",
+        "Managed and optimized cloud infrastructure (Terraform) for ML workloads, achieving a 20% reduction in operational costs.",
+        "Collaborated with data scientists to transition models from research to production, ensuring scalability, monitoring, and performance.",
+        "Established comprehensive monitoring and alerting systems for ML models using Prometheus and Grafana, improving model reliability and proactive issue detection."
+      ],
+      "technologies": [
+        "Python",
+        "Go",
+        "AWS",
+        "Azure",
+        "Kubernetes",
+        "Docker",
+        "Kubeflow",
+        "MLflow",
+        "Terraform",
+        "GitLab CI",
+        "Prometheus",
+        "Grafana",
+        "TensorFlow",
+        "PyTorch"
+      ]
+    },
+    {
+      "company": "DataFlow Dynamics",
+      "role": "MLOps Engineer",
+      "location": "Dallas, TX",
+      "start_date": "2018-06",
+      "end_date": "2021-02",
+      "description": [
+        "Built and maintained automated data pipelines for ML model training using Apache Airflow and AWS Glue.",
+        "Containerized machine learning models using Docker for consistent execution across development and production environments.",
+        "Assisted in the deployment of initial ML models to production, focusing on reproducibility and versioning.",
+        "Implemented basic monitoring for deployed models and infrastructure.",
+        "Contributed to the development of internal tools to streamline model lifecycle management."
+      ],
+      "technologies": [
+        "Python",
+        "AWS",
+        "Docker",
+        "Airflow",
+        "Sagemaker",
+        "Scikit-learn",
+        "Jenkins",
+        "PostgreSQL"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Texas at Austin",
+      "degree": "Master of Science in Computer Science (Specialization in Machine Learning)",
+      "location": "Austin, TX",
+      "start_date": "2017",
+      "end_date": "2018"
+    },
+    {
+      "institution": "Texas A&M University",
+      "degree": "Bachelor of Science in Computer Engineering",
+      "location": "College Station, TX",
+      "start_date": "2013",
+      "end_date": "2017"
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "level": "Native"
+    },
+    {
+      "name": "Spanish",
+      "level": "Conversational"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Machine Learning \u2013 Specialty",
+      "issuer": "Amazon Web Services",
+      "year": 2021
+    },
+    {
+      "name": "Certified Kubernetes Application Developer (CKAD)",
+      "issuer": "Cloud Native Computing Foundation",
+      "year": 2020
+    }
+  ],
+  "avatar_seed": "eleanor.vance@example.com"
+}

@@ -1,0 +1,159 @@
+{
+  "full_name": "Sophia Rodriguez",
+  "email": "sophia.rodriguez@example.com",
+  "phone": "+1-555-0102",
+  "location": "Austin, TX",
+  "title": "Senior MLOps Engineer",
+  "summary": "Highly experienced and results-driven Senior MLOps Engineer with 8+ years of expertise in designing, implementing, and maintaining scalable machine learning systems in production. Proficient in MLOps best practices, CI/CD pipelines, cloud infrastructure (AWS, Azure), containerization, and orchestration technologies. Passionate about streamlining ML workflows, improving model reliability, and driving data-driven innovation.",
+  "skills": {
+    "programming_languages": [
+      "Python",
+      "Go",
+      "Bash"
+    ],
+    "frameworks": [
+      "TensorFlow",
+      "PyTorch",
+      "Scikit-learn",
+      "MLflow",
+      "Kubeflow",
+      "FastAPI"
+    ],
+    "databases": [
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "Elasticsearch"
+    ],
+    "cloud": [
+      "AWS (S3, EC2, EKS, SageMaker, Lambda, Glue, RDS)",
+      "Azure (AKS, Azure ML, Data Factory, Blob Storage)",
+      "GCP (Vertex AI, GKE)"
+    ],
+    "other": [
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "Ansible",
+      "Git",
+      "CI/CD (GitLab CI, GitHub Actions, Jenkins)",
+      "Apache Airflow",
+      "Kafka",
+      "Prometheus",
+      "Grafana"
+    ]
+  },
+  "work_experience": [
+    {
+      "company": "CogniStream Solutions",
+      "role": "Senior MLOps Engineer",
+      "location": "Austin, TX",
+      "start_date": "2020-03",
+      "end_date": "Present",
+      "description": [
+        "Led the design and implementation of scalable MLOps platforms and CI/CD pipelines for machine learning models, reducing deployment time by 40%.",
+        "Orchestrated Kubernetes clusters on AWS EKS and Azure AKS for robust model serving and batch inference, ensuring high availability and fault tolerance.",
+        "Developed and maintained infrastructure-as-code (IaC) using Terraform for cloud resource provisioning across AWS and Azure environments.",
+        "Implemented MLflow for experiment tracking, model registry, and reproducible model lifecycle management.",
+        "Designed and built monitoring and alerting solutions using Prometheus and Grafana for production ML models, enhancing system stability and performance."
+      ],
+      "technologies": [
+        "AWS EKS",
+        "Azure AKS",
+        "Kubernetes",
+        "Docker",
+        "Terraform",
+        "MLflow",
+        "Python",
+        "FastAPI",
+        "Prometheus",
+        "Grafana",
+        "GitLab CI",
+        "Kafka"
+      ]
+    },
+    {
+      "company": "DataPulse Innovations",
+      "role": "MLOps Engineer",
+      "location": "San Francisco, CA",
+      "start_date": "2016-08",
+      "end_date": "2020-02",
+      "description": [
+        "Built and automated data pipelines using Apache Airflow for machine learning feature engineering and model training.",
+        "Deployed containerized machine learning models using Docker and Kubernetes, improving scalability and portability.",
+        "Collaborated with data scientists to transition research prototypes into production-ready ML services.",
+        "Implemented continuous integration and continuous deployment (CI/CD) practices for ML codebases, reducing manual effort and errors.",
+        "Managed cloud resources on AWS, including S3, EC2, and Lambda for various ML workloads."
+      ],
+      "technologies": [
+        "Python",
+        "Docker",
+        "Kubernetes",
+        "AWS (S3, EC2, Lambda)",
+        "Apache Airflow",
+        "Git",
+        "Jenkins",
+        "PostgreSQL"
+      ]
+    },
+    {
+      "company": "TechFusion Solutions",
+      "role": "Junior Data Engineer",
+      "location": "Seattle, WA",
+      "start_date": "2014-06",
+      "end_date": "2016-07",
+      "description": [
+        "Developed ETL pipelines for data ingestion and transformation from various sources into a centralized data warehouse.",
+        "Assisted in the maintenance and optimization of SQL databases.",
+        "Wrote scripts in Python for data cleaning and pre-processing tasks.",
+        "Supported senior engineers in deploying and monitoring data services."
+      ],
+      "technologies": [
+        "Python",
+        "SQL",
+        "PostgreSQL",
+        "Pandas",
+        "Bash"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Texas at Austin",
+      "degree": "M.S. in Computer Science",
+      "location": "Austin, TX",
+      "start_date": "2013",
+      "end_date": "2014"
+    },
+    {
+      "institution": "University of Washington",
+      "degree": "B.S. in Computer Science",
+      "location": "Seattle, WA",
+      "start_date": "2009",
+      "end_date": "2013"
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "level": "Native"
+    },
+    {
+      "name": "Spanish",
+      "level": "Intermediate"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Solutions Architect - Professional",
+      "issuer": "Amazon Web Services",
+      "year": 2021
+    },
+    {
+      "name": "Certified Kubernetes Administrator (CKA)",
+      "issuer": "Cloud Native Computing Foundation",
+      "year": 2020
+    }
+  ],
+  "avatar_seed": "sophia.rodriguez@example.com"
+}
