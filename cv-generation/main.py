@@ -1,3 +1,4 @@
+import os
 import logging
 from dotenv import load_dotenv
 from pydantic import ValidationError
@@ -7,10 +8,11 @@ from ai_clients.openai import OpenAiClient
 from ai_clients.genai import GenAiClient
 from utils import store_json
 
-logging.handlers = logging.StreamHandler()
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
-
 load_dotenv()
+LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO").upper()
+logging.root.setLevel(LOG_LEVEL)
+logging.handlers = logging.StreamHandler()
+logging.basicConfig(level=LOG_LEVEL, format="%(asctime)s - %(levelname)s - %(message)s")
 
 def generate_multiple_cvs():
     print("How many CVs would you like to generate?")
