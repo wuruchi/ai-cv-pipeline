@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{{ full_name }} - CV</title>
+  <style>
+    body { font-family: sans-serif; margin: 40px; }
+    .header { display: flex; align-items: center; }
+    .avatar { width: 120px; height: 120px; border-radius: 50%; margin-right: 24px; }
+    h1 { margin-bottom: 4px; }
+    h2 { margin-top: 24px; border-bottom: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img class="avatar" src="{{ avatar_url }}" alt="Avatar">
+    <div>
+      <h1>{{ full_name }}</h1>
+      <div>{{ title }}</div>
+      <div>{{ email }} · {{ phone }} · {{ location }}</div>
+    </div>
+  </div>
+
+  <h2>Summary</h2>
+  <p>{{ summary }}</p>
+
+  <h2>Skills</h2>
+  <ul>
+    <li><strong>Languages:</strong> {{ skills.programming_languages | join(", ") }}</li>
+    <li><strong>Frameworks:</strong> {{ skills.frameworks | join(", ") }}</li>
+    <li><strong>Databases:</strong> {{ skills.databases | join(", ") }}</li>
+    <li><strong>Cloud:</strong> {{ skills.cloud | join(", ") }}</li>
+    <li><strong>Other:</strong> {{ skills.other | join(", ") }}</li>
+  </ul>
+
+  <h2>Experience</h2>
+  {% for job in work_experience %}
+    <h3>{{ job.role }} – {{ job.company }} ({{ job.start_date }} – {{ job.end_date }})</h3>
+    <div>{{ job.location }}</div>
+    <ul>
+      {% for bullet in job.description %}
+        <li>{{ bullet }}</li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+
+  <h2>Education</h2>
+  {% for edu in education %}
+    <h3>{{ edu.degree }} – {{ edu.institution }}</h3>
+    <div>{{ edu.location }} ({{ edu.start_date }} – {{ edu.end_date }})</div>
+  {% endfor %}
+</body>
+</html>

@@ -1,13 +1,18 @@
+import logging
 from dotenv import load_dotenv
 from pydantic import ValidationError
-from generate import generate_json_cv_using_llm
+from generate_cvs import generate_json_cv_using_llm
+from generate_pdfs import generate_pdfs_from_available_jsons
 from ai_clients.openai import OpenAiClient
 from ai_clients.genai import GenAiClient
 from utils import store_json
 
+logging.handlers = logging.StreamHandler()
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+
 load_dotenv()
 
-if __name__ == "__main__":
+def generate_multiple_cvs():
     print("How many CVs would you like to generate?")
     num_cvs = int(input().strip())
     print("Which AI client would you like to use? (1) GenAI (2) OpenAI")
@@ -32,3 +37,13 @@ if __name__ == "__main__":
         except Exception as e:
             print(f"An error occurred while generating CV {i+1}: {e}")
             print("Skipping this CV.")
+
+if __name__ == "__main__":
+    print("What would you like to do?")
+    print("(1) Generate JSON CVs")
+    print("(2) Generate PDF CVs from existing JSONs")
+    choice = input().strip()
+    if choice == "1":
+        generate_multiple_cvs()
+    elif choice == "2":
+        generate_pdfs_from_available_jsons()
