@@ -12,7 +12,7 @@ We have the projects:
 
 ## How to Run it
 
-First, make sure there are `PDF` CVs available in `data/cvs`, the `API` needs them to run. Follow the instructions in the `cv_generation` projec to generate some fake CVs.
+First, make sure there are `PDF` CVs available in `data/cvs`, the `API` needs them to run. Follow the instructions in the `cv_generation` project to generate some fake CVs.
 
 Then, run:
 
