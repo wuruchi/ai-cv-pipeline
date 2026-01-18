@@ -14,6 +14,8 @@ from embeddings_workflow.workflow import workflow as embeddings_workflow
 from embeddings_workflow.chunk import SimpleChunker
 
 from ai_clients.perplexityai import PerplexityAiClient
+from ai_clients.openai import OpenAiClient
+from ai_clients.genai import GenAiClient
 
 TOP_RESULTS = 5
 LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO").upper()
@@ -59,7 +61,9 @@ class ChatResponse(BaseModel):
     sources: List[Dict]
 
 def call_llm(prompt: str) -> str:
-    client = PerplexityAiClient()
+    # client = PerplexityAiClient()
+    # client = OpenAiClient()
+    client = GenAiClient()
     response = client.query(prompt)
     return response
 

@@ -20,7 +20,7 @@ uv run python main.py
 
 And follow the instructions. In summary:
 
-`Option 1` allows you to generate `json` CV contents using a LLM model of your choice. You need to provided the credentials following the `.env.template`.
+`Option 1` allows you to generate `json` CV contents using a LLM model of your choice. You need to provide the credentials following the `.env.template`.
 
 `Option 2` allows you to generate `pdf` CVs from the `json` contents you have previously generated.
 

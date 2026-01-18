@@ -15,7 +15,7 @@ class GenAiClient(AiClient):
             model=self.model,
             contents=prompt,
             config={
-                "response_mime_type": "application/json"
+                "response_mime_type": "text/plain",
             },
         )    
         return response.text

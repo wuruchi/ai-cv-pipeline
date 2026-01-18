@@ -31,8 +31,7 @@ export const Chat = () => {
             setResponses([...responses, response]);
 
         } catch (error) {
-            console.error('Error sending message:', error);
-            setResponses([...responses, 'Error: Unable to get response from server.']);
+            console.error('Error sending message:', error);            
         }
         setLoadingMessage(false);
     }

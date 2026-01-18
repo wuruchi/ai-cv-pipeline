@@ -28,3 +28,7 @@ make run
 
 And that's it. Open the `UI` from the link in your terminal. Wait for the `API` to finish starting up before making requests.
 
+## Important Resources
+
+- [Google AI Studio API Key](https://aistudio.google.com/api-keys)
+- [OpenRouter AI API Key](https://openrouter.ai/settings/keys)
