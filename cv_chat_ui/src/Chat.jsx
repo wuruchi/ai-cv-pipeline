@@ -23,7 +23,7 @@ export const Chat = () => {
         if (!inputValue.trim()) return;
         setLoadingMessage(true);
         const userMessage = inputValue.trim();
-        setMessages([...messages, userMessage]);
+        setMessages([userMessage, ...messages]);
         setInputValue('');
 
         try {
@@ -72,7 +72,7 @@ export const Chat = () => {
                 ))}
             </section>
             <section className='chat__history'>
-                {(messages.reverse()).map((msg, index) => (
+                {messages.map((msg, index) => (
                     <div key={index} className='chat__history__message'>
                         {msg}
                     </div>

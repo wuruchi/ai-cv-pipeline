@@ -43,14 +43,14 @@ def process_pdf_files(directory: str, chunker: Chunker):
     Returns:
         tuple: (all_chunk_text, all_metadata, all_ids)
     """
-    index = 0
+    collection_index = 0
     all_chunk_text = []
     all_metadata = []
     all_ids = []
     for filename in os.listdir(directory):
         if filename.endswith(".pdf"):
             filepath = os.path.join(directory, filename)
-            chunk_text, metadata, ids, index = process_pdf(index, filepath, chunker=chunker)
+            chunk_text, metadata, ids, collection_index = process_pdf(collection_index, filepath, chunker=chunker)
             all_chunk_text.extend(chunk_text)
             all_metadata.extend(metadata)
             all_ids.extend(ids)

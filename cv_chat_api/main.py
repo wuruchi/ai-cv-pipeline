@@ -8,13 +8,14 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from dotenv import load_dotenv
 
-from search_workflow.search import search_similar
+from search_workflow.search import SearchSimilar
 from search_workflow.prompt import build_prompt
 from embeddings_workflow.workflow import workflow as embeddings_workflow
 from embeddings_workflow.chunk import SimpleChunker
 
 from ai_clients.perplexityai import PerplexityAiClient
 
+TOP_RESULTS = 5
 LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO").upper()
 logging.root.setLevel(LOG_LEVEL)
 logging.handlers = logging.StreamHandler()
@@ -43,7 +44,12 @@ app.add_middleware(
 
 
 directory = Path(__file__).parent / "data"
-all_chunk_text, all_metadata, embeddings, index, all_ids = embeddings_workflow(directory, chunker=SimpleChunker(300))
+all_chunk_text, all_metadata, embeddings, faiss_index, all_ids = embeddings_workflow(directory, chunker=SimpleChunker(800))
+search_similar = SearchSimilar(
+    base_index=faiss_index,
+    all_chunk_text=all_chunk_text,
+    all_metadata=all_metadata,
+)
 
 class ChatRequest(BaseModel):
     message: str
@@ -60,12 +66,9 @@ def call_llm(prompt: str) -> str:
 @app.post("/chat", response_model=ChatResponse)
 def chat_endpoint(request: ChatRequest):
     logging.info(f"Received chat request: {request.message}")
-    contexts = search_similar(
+    contexts = search_similar.search(
         question=request.message,
-        index=index,
-        all_chunk_text=all_chunk_text,
-        all_metadata=all_metadata,
-        top_k=5,
+        top_k=TOP_RESULTS,
     )
     prompt = build_prompt(request.message, contexts)
     reply = call_llm(prompt)
