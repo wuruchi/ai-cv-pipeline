@@ -1,6 +1,6 @@
 import os
-from cv_chat_api.embeddings_workflow.pdf_reader import extract_text_from_pdf
-from cv_chat_api.embeddings_workflow.chunk import simple_chunk
+from embeddings_workflow.pdf_reader import extract_text_from_pdf
+from embeddings_workflow.chunk import Chunker
 import numpy as np
 
 class NaiveCandidateName:
@@ -11,17 +11,17 @@ class NaiveCandidateName:
         first_line = text.splitlines()[0].strip()
         return first_line
 
-def process_pdf(index: int, filepath: str, candidate_name_extractor=NaiveCandidateName):
+def process_pdf(index: int, filepath: str, candidate_name_extractor=NaiveCandidateName, chunker=Chunker):
     chunk_text = []
     metadata = []
     ids = []
     text = extract_text_from_pdf(filepath)
     candidate_name = candidate_name_extractor.get(text)
-    for chunk in simple_chunk(text):
+    for chunk in chunker.chunk(text):
         chunk_text.append(chunk)
         metadata.append(
             {
-                "cv_id": filepath,
+                "cv_id": os.path.basename(filepath),
                 "candidate_name": candidate_name,
                 "id": index,
             }
@@ -30,7 +30,19 @@ def process_pdf(index: int, filepath: str, candidate_name_extractor=NaiveCandida
         index += 1
     return chunk_text, metadata, ids, index
 
-def process_pdf_files(directory: str):
+def process_pdf_files(directory: str, chunker: Chunker):
+    """
+    Processes all PDF files in the given directory and extracts chunked text,
+    metadata, and unique IDs.
+
+    `all_ids` is returned as a numpy array for compatibility with embedding functions.
+    It is unique per text chunk.
+
+    Args:
+        directory (str): Path to the directory containing PDF files.
+    Returns:
+        tuple: (all_chunk_text, all_metadata, all_ids)
+    """
     index = 0
     all_chunk_text = []
     all_metadata = []
@@ -38,7 +50,7 @@ def process_pdf_files(directory: str):
     for filename in os.listdir(directory):
         if filename.endswith(".pdf"):
             filepath = os.path.join(directory, filename)
-            chunk_text, metadata, ids, index = process_pdf(index, filepath)
+            chunk_text, metadata, ids, index = process_pdf(index, filepath, chunker=chunker)
             all_chunk_text.extend(chunk_text)
             all_metadata.extend(metadata)
             all_ids.extend(ids)
