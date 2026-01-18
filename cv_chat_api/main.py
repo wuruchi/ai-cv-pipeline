@@ -18,6 +18,12 @@ logging.root.setLevel(LOG_LEVEL)
 logging.handlers = logging.StreamHandler()
 logging.basicConfig(level=LOG_LEVEL, format="%(asctime)s - %(levelname)s - %(message)s")
 
+
+logging.info("Starting CV Chat API service...")
+
+
+logging.info(f"Using log level: {LOG_LEVEL}")
+
 load_dotenv()
 
 app = FastAPI()

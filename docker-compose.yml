@@ -1,0 +1,28 @@
+services:
+  cv_chat_api:
+    build: ./cv_chat_api
+    ports:
+      - "8000:8000"
+    develop:
+      watch:
+        - action: sync
+          path: ./cv_chat_api
+          target: /app
+          
+    environment:
+      - DOTENV_PATH=./cv_chat_api/.env
+    volumes:
+      - ./data/cvs:/app/data
+
+  cv_chat_ui:
+    build: ./cv_chat_ui
+    ports:
+      - "8080:8080"
+    develop:
+      watch:
+        - action: sync
+          path: ./cv_chat_ui
+          target: /app
+    depends_on:
+      - cv_chat_api  
+    
