@@ -1,8 +1,10 @@
 import os
 import logging
+from pathlib import Path
 from typing import List, Dict
 from fastapi import FastAPI
 from fastapi.responses import FileResponse
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from dotenv import load_dotenv
 
@@ -20,14 +22,26 @@ logging.basicConfig(level=LOG_LEVEL, format="%(asctime)s - %(levelname)s - %(mes
 
 
 logging.info("Starting CV Chat API service...")
-
-
 logging.info(f"Using log level: {LOG_LEVEL}")
 
 load_dotenv()
 
 app = FastAPI()
-from pathlib import Path
+
+origins = [
+    "http://localhost",
+    "http://localhost:3000"
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
 directory = Path(__file__).parent / "data"
 all_chunk_text, all_metadata, embeddings, index, all_ids = embeddings_workflow(directory, chunker=SimpleChunker(300))
 
@@ -63,8 +77,8 @@ def chat_endpoint(request: ChatRequest):
             seen.add(key)
             unique_sources.append(
                 {
-                    "cv_id": ctx['cv_id'],
-                    "candidate_name": ctx['candidate_name'],
+                    "cvId": ctx['cv_id'],
+                    "candidateName": ctx['candidate_name'],
                 }
             )
     logging.info(f"Generated reply: {reply}")

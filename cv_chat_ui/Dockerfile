@@ -6,6 +6,7 @@ COPY package.json package-lock.json /app/
 # Install dependencies
 RUN npm install
 # Expose port
-EXPOSE 8080
+EXPOSE 3000
+COPY . /app/
 # Start the development server
-CMD ["npm", "run", "preview"]
+CMD ["npm", "run", "dev"]
