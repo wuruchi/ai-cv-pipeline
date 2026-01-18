@@ -40,12 +40,26 @@ def generate_multiple_cvs():
             print(f"An error occurred while generating CV {i+1}: {e}")
             print("Skipping this CV.")
 
+def export_pdfs_to_upper_directory():
+    output_dir = os.path.abspath(os.path.join(os.getcwd(), "..", "data", "cvs"))
+    os.makedirs(output_dir, exist_ok=True)
+    # copy generated PDFs to the new directory
+    for file in os.listdir("./output"):
+        if file.endswith(".pdf"):
+            src = os.path.join("./output", file)
+            dst = os.path.join(output_dir, file)
+            os.replace(src, dst)
+    print(f"Exported PDFs to {output_dir}")
+
 if __name__ == "__main__":
     print("What would you like to do?")
     print("(1) Generate JSON CVs")
     print("(2) Generate PDF CVs from existing JSONs")
+    print("(3) Export generated PDFs to ../data/cvs/")
     choice = input().strip()
     if choice == "1":
         generate_multiple_cvs()
-    elif choice == "2":
+    if choice == "2":
         generate_pdfs_from_available_jsons()
+    if choice == "3":
+        export_pdfs_to_upper_directory()
