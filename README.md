@@ -4,7 +4,7 @@ We have the projects:
 
 - `cv_generation`: Allows you to generate CVs with fake data.
 - `cv_chat_api`: Builds an API that allows you to ask questions about he CVs you generated.
-- `cv_chat_ui`: Implements a UI that allows you to query the API.
+- `cv_chat_ui`: Implements a UI that allows you to query an LLM about the CVs you generated. Answers general questions about the candidates.
 
 ## Demo
 

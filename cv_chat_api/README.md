@@ -17,3 +17,5 @@ uv sync
 ```bash
 uv run python main.py
 ```
+
+Or better yet, run `docker compose` from the parent folder.
